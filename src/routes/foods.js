@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { checkSchema } = require('express-validator');
-const controller = require('../controllers/categories');
-const schema = require('../services/validations/categories');
+const controller = require('../controllers/foods');
+const schema = require('../services/validations/foods');
 
 const routerCategories = Router();
 
