@@ -26,6 +26,22 @@ const categoryId = {
     }
   },
 };
+const categoryIdIfExist = {
+  in: ['body'],
+  custom: {
+    options: async (value) => {
+      if (!value) return;
+      try {
+        const data = await Category.findOne({ where: { id: value } });
+        if (!data) {
+          return Promise.reject('Cet catégorie n\'existe pas');
+        }
+      } catch (e) {
+        loggingError(NAMESPACE, e.message, e);
+      }
+    }
+  },
+};
 const id = {
   in: ['params'],
   custom: {
@@ -49,6 +65,7 @@ module.exports = {
   },
   update: {
     id,
+    categoryId: categoryIdIfExist
   },
   getOne: {
     id,
