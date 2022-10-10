@@ -1,1 +1,304 @@
-{"client":"Thunder Client","collectionName":"api_monparrain","dateExported":"2022-10-10T08:48:01.564Z","version":"1.1","folders":[{"_id":"4937be79-adff-4c16-975d-7c64dd822278","name":"categories","containerId":"","created":"2022-10-02T02:40:07.820Z","sortNum":10000,"settings":{"headers":[],"tests":[{"type":"set-env-var","custom":"{{BASE_URL}}/categories","action":"setto","value":"{{ENDPOINT_CATEGORIE}}"}]}},{"_id":"1cb1a84a-a6d5-47cf-879a-f259b157a253","name":"food","containerId":"","created":"2022-10-09T12:30:48.683Z","sortNum":20000,"settings":{"headers":[],"tests":[{"type":"set-env-var","custom":"{{BASE_URL}}/foods","action":"setto","value":"{{ENDPOINT_FOOD}}"}]}},{"_id":"32e8264d-36c4-4369-8ee3-3e76b388a708","name":"upload","containerId":"","created":"2022-10-10T07:54:01.240Z","sortNum":30000,"settings":{"headers":[],"tests":[{"type":"set-env-var","custom":"{{BASE_URL}}/uploads","action":"setto","value":"{{ENDPOINT_UPLOAD}}"}]}}],"requests":[{"_id":"8af46f1c-a033-4a79-a71a-8c841b8ca0a5","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"4937be79-adff-4c16-975d-7c64dd822278","name":"GET","url":"{{ENDPOINT_CATEGORIE}}/","method":"GET","sortNum":10000,"created":"2022-10-02T02:40:18.373Z","modified":"2022-10-09T12:35:35.860Z","headers":[],"params":[],"tests":[]},{"_id":"f05614ca-8c0f-4d40-b39d-80762c4a921e","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"1cb1a84a-a6d5-47cf-879a-f259b157a253","name":"GET","url":"{{ENDPOINT_FOOD}}/","method":"GET","sortNum":10000,"created":"2022-10-09T12:30:48.683Z","modified":"2022-10-09T12:37:50.553Z","headers":[],"params":[],"tests":[]},{"_id":"58fb27e9-6cef-41fd-8172-c043c3fa8491","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"4937be79-adff-4c16-975d-7c64dd822278","name":"GET ONE","url":"{{ENDPOINT_CATEGORIE}}/23","method":"GET","sortNum":20000,"created":"2022-10-02T17:11:44.021Z","modified":"2022-10-09T13:22:25.066Z","headers":[],"params":[],"tests":[]},{"_id":"8cb21187-8261-421a-988d-475664d552d2","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"1cb1a84a-a6d5-47cf-879a-f259b157a253","name":"GET ONE","url":"{{ENDPOINT_FOOD}}/7","method":"GET","sortNum":20000,"created":"2022-10-09T12:30:48.684Z","modified":"2022-10-09T13:28:01.038Z","headers":[],"params":[],"tests":[]},{"_id":"0699afac-8b65-484d-8cb8-53a416c132ca","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"4937be79-adff-4c16-975d-7c64dd822278","name":"PING","url":"{{ENDPOINT_CATEGORIE}}/ping","method":"GET","sortNum":30000,"created":"2022-10-02T17:14:21.099Z","modified":"2022-10-09T12:36:16.645Z","headers":[],"params":[],"tests":[]},{"_id":"fece64fc-da33-4a4a-b52f-72893abf1b34","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"1cb1a84a-a6d5-47cf-879a-f259b157a253","name":"PING","url":"{{ENDPOINT_FOOD}}/ping","method":"GET","sortNum":30000,"created":"2022-10-09T12:30:48.685Z","modified":"2022-10-09T12:38:19.584Z","headers":[],"params":[],"tests":[]},{"_id":"0f193fed-29c5-4c92-be08-2803a4d7a6d5","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"4937be79-adff-4c16-975d-7c64dd822278","name":"CREATE","url":"{{ENDPOINT_CATEGORIE}}/","method":"POST","sortNum":40000,"created":"2022-10-02T17:41:01.191Z","modified":"2022-10-09T12:36:22.052Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n  \"title\": \"\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}","form":[]},"tests":[]},{"_id":"bb079e95-fe53-4a2b-ae8b-469e94a8ff36","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"1cb1a84a-a6d5-47cf-879a-f259b157a253","name":"CREATE","url":"{{ENDPOINT_FOOD}}/","method":"POST","sortNum":40000,"created":"2022-10-09T12:30:48.686Z","modified":"2022-10-09T12:38:29.445Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n  \"title\": \"\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}","form":[]},"tests":[]},{"_id":"1d31d8cd-c27b-4c88-b12d-f8feb88b4ed0","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"4937be79-adff-4c16-975d-7c64dd822278","name":"UPDATE","url":"{{ENDPOINT_CATEGORIE}}/2","method":"PUT","sortNum":50000,"created":"2022-10-02T17:52:51.055Z","modified":"2022-10-09T12:36:28.525Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n  \"title\": \"aaaaa\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}","form":[]},"tests":[]},{"_id":"55f5a3e6-bcce-4ddb-b8c8-bdb7f9687dc2","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"1cb1a84a-a6d5-47cf-879a-f259b157a253","name":"UPDATE","url":"{{ENDPOINT_FOOD}}/7","method":"PUT","sortNum":50000,"created":"2022-10-09T12:30:48.687Z","modified":"2022-10-09T13:25:50.490Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n  \"categoryId\": 23\n}","form":[]},"tests":[]},{"_id":"502f10bf-83b6-4c76-a6af-04cfb79b3d61","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"4937be79-adff-4c16-975d-7c64dd822278","name":"DELETE","url":"{{ENDPOINT_CATEGORIE}}/22","method":"DELETE","sortNum":60000,"created":"2022-10-02T18:01:53.023Z","modified":"2022-10-09T12:36:35.239Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n  \"title\": \"aaaaa\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}","form":[]},"tests":[]},{"_id":"29cfbfd9-9507-4833-868a-bb09961e13e4","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"1cb1a84a-a6d5-47cf-879a-f259b157a253","name":"DELETE","url":"{{ENDPOINT_FOOD}}/22","method":"DELETE","sortNum":60000,"created":"2022-10-09T12:30:48.688Z","modified":"2022-10-09T12:39:19.179Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n  \"title\": \"aaaaa\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}","form":[]},"tests":[]},{"_id":"cf4bf68f-d578-4669-8097-9180569e1011","colId":"224a0e0c-513b-44fc-8e27-c30d8496fea0","containerId":"32e8264d-36c4-4369-8ee3-3e76b388a708","name":"create","url":"{{ENDPOINT_UPLOAD}}?repository=images","method":"POST","sortNum":70000,"created":"2022-10-10T07:54:12.106Z","modified":"2022-10-10T08:42:48.468Z","headers":[],"params":[{"name":"repository","value":"images","isPath":false}],"body":{"type":"formdata","raw":"","form":[],"files":[{"name":"file","value":"C:\\Users\\Lino\\OneDrive\\Images\\WhatsApp Image 2022-09-22 at 10.51.01.jpeg"}]},"tests":[]}],"settings":{"headers":[],"tests":[{"type":"set-env-var","custom":"localhost:1337","action":"setto","value":"{{BASE_URL}}"}]}}
+{
+  "client": "Thunder Client",
+  "collectionName": "api_monparrain",
+  "dateExported": "2022-10-10T09:09:30.783Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "_id": "4937be79-adff-4c16-975d-7c64dd822278",
+      "name": "categories",
+      "containerId": "",
+      "created": "2022-10-02T02:40:07.820Z",
+      "sortNum": 10000,
+      "settings": {
+        "headers": [],
+        "tests": [
+          {
+            "type": "set-env-var",
+            "custom": "{{BASE_URL}}/categories",
+            "action": "setto",
+            "value": "{{ENDPOINT_CATEGORIE}}"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "1cb1a84a-a6d5-47cf-879a-f259b157a253",
+      "name": "food",
+      "containerId": "",
+      "created": "2022-10-09T12:30:48.683Z",
+      "sortNum": 20000,
+      "settings": {
+        "headers": [],
+        "tests": [
+          {
+            "type": "set-env-var",
+            "custom": "{{BASE_URL}}/foods",
+            "action": "setto",
+            "value": "{{ENDPOINT_FOOD}}"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "32e8264d-36c4-4369-8ee3-3e76b388a708",
+      "name": "upload",
+      "containerId": "",
+      "created": "2022-10-10T07:54:01.240Z",
+      "sortNum": 30000,
+      "settings": {
+        "headers": [],
+        "tests": [
+          {
+            "type": "set-env-var",
+            "custom": "{{BASE_URL}}/uploads",
+            "action": "setto",
+            "value": "{{ENDPOINT_UPLOAD}}"
+          }
+        ]
+      }
+    }
+  ],
+  "requests": [
+    {
+      "_id": "8af46f1c-a033-4a79-a71a-8c841b8ca0a5",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "4937be79-adff-4c16-975d-7c64dd822278",
+      "name": "GET",
+      "url": "{{ENDPOINT_CATEGORIE}}/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2022-10-02T02:40:18.373Z",
+      "modified": "2022-10-09T12:35:35.860Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "f05614ca-8c0f-4d40-b39d-80762c4a921e",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "1cb1a84a-a6d5-47cf-879a-f259b157a253",
+      "name": "GET",
+      "url": "{{ENDPOINT_FOOD}}/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2022-10-09T12:30:48.683Z",
+      "modified": "2022-10-09T12:37:50.553Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "58fb27e9-6cef-41fd-8172-c043c3fa8491",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "4937be79-adff-4c16-975d-7c64dd822278",
+      "name": "GET ONE",
+      "url": "{{ENDPOINT_CATEGORIE}}/23",
+      "method": "GET",
+      "sortNum": 20000,
+      "created": "2022-10-02T17:11:44.021Z",
+      "modified": "2022-10-09T13:22:25.066Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "8cb21187-8261-421a-988d-475664d552d2",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "1cb1a84a-a6d5-47cf-879a-f259b157a253",
+      "name": "GET ONE",
+      "url": "{{ENDPOINT_FOOD}}/7",
+      "method": "GET",
+      "sortNum": 20000,
+      "created": "2022-10-09T12:30:48.684Z",
+      "modified": "2022-10-09T13:28:01.038Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "0699afac-8b65-484d-8cb8-53a416c132ca",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "4937be79-adff-4c16-975d-7c64dd822278",
+      "name": "PING",
+      "url": "{{ENDPOINT_CATEGORIE}}/ping",
+      "method": "GET",
+      "sortNum": 30000,
+      "created": "2022-10-02T17:14:21.099Z",
+      "modified": "2022-10-09T12:36:16.645Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "fece64fc-da33-4a4a-b52f-72893abf1b34",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "1cb1a84a-a6d5-47cf-879a-f259b157a253",
+      "name": "PING",
+      "url": "{{ENDPOINT_FOOD}}/ping",
+      "method": "GET",
+      "sortNum": 30000,
+      "created": "2022-10-09T12:30:48.685Z",
+      "modified": "2022-10-09T12:38:19.584Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "0f193fed-29c5-4c92-be08-2803a4d7a6d5",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "4937be79-adff-4c16-975d-7c64dd822278",
+      "name": "CREATE",
+      "url": "{{ENDPOINT_CATEGORIE}}/",
+      "method": "POST",
+      "sortNum": 40000,
+      "created": "2022-10-02T17:41:01.191Z",
+      "modified": "2022-10-09T12:36:22.052Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "bb079e95-fe53-4a2b-ae8b-469e94a8ff36",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "1cb1a84a-a6d5-47cf-879a-f259b157a253",
+      "name": "CREATE",
+      "url": "{{ENDPOINT_FOOD}}/",
+      "method": "POST",
+      "sortNum": 40000,
+      "created": "2022-10-09T12:30:48.686Z",
+      "modified": "2022-10-09T12:38:29.445Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "1d31d8cd-c27b-4c88-b12d-f8feb88b4ed0",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "4937be79-adff-4c16-975d-7c64dd822278",
+      "name": "UPDATE",
+      "url": "{{ENDPOINT_CATEGORIE}}/2",
+      "method": "PUT",
+      "sortNum": 50000,
+      "created": "2022-10-02T17:52:51.055Z",
+      "modified": "2022-10-09T12:36:28.525Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"aaaaa\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "55f5a3e6-bcce-4ddb-b8c8-bdb7f9687dc2",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "1cb1a84a-a6d5-47cf-879a-f259b157a253",
+      "name": "UPDATE",
+      "url": "{{ENDPOINT_FOOD}}/7",
+      "method": "PUT",
+      "sortNum": 50000,
+      "created": "2022-10-09T12:30:48.687Z",
+      "modified": "2022-10-10T09:08:36.040Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"categoryId\": 23,\n  \"price\": 1200\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "502f10bf-83b6-4c76-a6af-04cfb79b3d61",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "4937be79-adff-4c16-975d-7c64dd822278",
+      "name": "DELETE",
+      "url": "{{ENDPOINT_CATEGORIE}}/22",
+      "method": "DELETE",
+      "sortNum": 60000,
+      "created": "2022-10-02T18:01:53.023Z",
+      "modified": "2022-10-09T12:36:35.239Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"aaaaa\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "29cfbfd9-9507-4833-868a-bb09961e13e4",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "1cb1a84a-a6d5-47cf-879a-f259b157a253",
+      "name": "DELETE",
+      "url": "{{ENDPOINT_FOOD}}/22",
+      "method": "DELETE",
+      "sortNum": 60000,
+      "created": "2022-10-09T12:30:48.688Z",
+      "modified": "2022-10-09T12:39:19.179Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"aaaaa\",\n  \"description\": \"une description\",\n  \"image\": \"\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "cf4bf68f-d578-4669-8097-9180569e1011",
+      "colId": "224a0e0c-513b-44fc-8e27-c30d8496fea0",
+      "containerId": "32e8264d-36c4-4369-8ee3-3e76b388a708",
+      "name": "create",
+      "url": "{{ENDPOINT_UPLOAD}}?repository=images",
+      "method": "POST",
+      "sortNum": 70000,
+      "created": "2022-10-10T07:54:12.106Z",
+      "modified": "2022-10-10T08:42:48.468Z",
+      "headers": [],
+      "params": [
+        {
+          "name": "repository",
+          "value": "images",
+          "isPath": false
+        }
+      ],
+      "body": {
+        "type": "formdata",
+        "raw": "",
+        "form": [],
+        "files": [
+          {
+            "name": "file",
+            "value": "C:\\Users\\Lino\\OneDrive\\Images\\WhatsApp Image 2022-09-22 at 10.51.01.jpeg"
+          }
+        ]
+      },
+      "tests": []
+    }
+  ],
+  "settings": {
+    "headers": [],
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "localhost:1337",
+        "action": "setto",
+        "value": "{{BASE_URL}}"
+      }
+    ]
+  }
+}

@@ -9,6 +9,11 @@ const title = {
   notEmpty: true,
   errorMessage: 'Ce champ est obligatoire'
 };
+const price = {
+  in: ['body'],
+  notEmpty: true,
+  errorMessage: 'Ce champ est obligatoire'
+};
 const categoryId = {
   in: ['body'],
   notEmpty: true,
@@ -62,6 +67,7 @@ module.exports = {
   create: {
     title,
     categoryId,
+    price,
   },
   update: {
     id,

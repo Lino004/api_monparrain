@@ -78,6 +78,7 @@ const create = async (req, res) => {
       description: req.body.description,
       image: req.body.image,
       categoryId: req.body.categoryId,
+      price: req.body.price,
     });
     return res.status(201).send({ data });
   } catch (error) {
@@ -117,11 +118,13 @@ const update = async (req, res) => {
       description,
       image,
       categoryId,
+      price,
     } = req.body;
     if (title) model.title = title;
     if (description) model.description = description;
     if (image) model.image = image;
     if (categoryId) model.categoryId = categoryId;
+    if (price) model.price = price;
     const data = await model.save();
     return res.status(200).send({data, msg: 'Modification effectué avec succès'});
   } catch (error) {
