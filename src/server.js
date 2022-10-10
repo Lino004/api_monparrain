@@ -1,13 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { server } = require('./config');
+const fileUpload = require('express-fileupload');
+const { server, upload } = require('./config');
 const { generateRoutes } = require('./routes');
-
 
 const app = express();
 
 app.use(cors());
+
+// enable files upload
+app.use(fileUpload(upload.config));
+app.use(express.static(upload.repositoryName));
 
 // Configuring body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));

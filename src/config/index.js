@@ -17,11 +17,17 @@ const DB = {
   PROD_DB:  process.env.PROD_DB,
 };
 
+const UPLOAD = {
+  config: { createParentPath: true },
+  repositoryName: 'uploads',
+};
+
 
 const config = {
   server: SERVER,
   db: DB,
-  env: process.env.NODE_ENV || 'development'
+  env: process.env.NODE_ENV || 'development',
+  upload: UPLOAD
 };
 
 module.exports = config;
