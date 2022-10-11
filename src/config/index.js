@@ -14,7 +14,7 @@ const SERVER = {
 
 const DB = {
   DEV_DB:  process.env.DEV_DB,
-  PROD_DB:  process.env.PROD_DB,
+  DATABASE_URL:  process.env.DATABASE_URL,
 };
 
 const UPLOAD = {
