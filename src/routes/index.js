@@ -1,11 +1,11 @@
 const routerCategories = require('./categories');
 const routerFoods = require('./foods');
-const routerUploads = require('./uploads');
+const routerFiles = require('./files');
 
 const generateRoutes = (app) => {
   app.use('/categories', routerCategories);
   app.use('/foods', routerFoods);
-  app.use('/uploads', routerUploads);
+  app.use('/files', routerFiles);
 };
 
 module.exports = {

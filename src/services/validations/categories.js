@@ -14,7 +14,7 @@ const id = {
   custom: {
     options: async (value) => {
       try {
-        const data = await Model.findOne({ where: { id: value } });
+        const data = await Model.findByPk(value);
         if (!data) {
           return Promise.reject('Cet élement n\'existe pas');
         }

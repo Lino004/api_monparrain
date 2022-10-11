@@ -1,6 +1,8 @@
-const { error: loggingError } = require('../config/logging');
+const fs = require('fs');
 const { validationResult } = require('express-validator');
-const { Food, Category } = require('../sequelize/models');
+const { error: loggingError } = require('../config/logging');
+const { Food, Category, File } = require('../sequelize/models');
+const { upload } = require('../config');
 
 const NAMESPACE = 'FOOD_CONTROLLER';
 const Model = Food;
@@ -31,7 +33,7 @@ const getAll = async (req, res) => {
     const { count, rows } = await Model.findAndCountAll({
       offset,
       limit,
-      where: {}
+      where: {},
     });
     return res.status(200).json({ data: rows, count });
   } catch (error) {
@@ -53,7 +55,10 @@ const getOne = async (req, res) => {
   }
   try {
     const { id } = req.params;
-    const data = await Model.findOne({ where: { id }, include: Category });
+    const data = await Model.findOne({ where: { id }, include: [
+      { model: Category, as: 'categories' },
+      { model: File, as: 'files' },
+    ]});
     return res.status(200).json(data);
   } catch (error) {
     const message = 'Erreur lors de la récupération de l\'élément';
@@ -95,7 +100,14 @@ const deleteOne = async (req, res) => {
   }
   try {
     const { id } = req.params;
-    const model = await Model.findByPk(id);
+    const model = await Model.findOne({ where: { id }, include: [{model: File, as: 'files'}] });
+    if (model.files && Array.isArray(model.files)) {
+      model.files.forEach(file => {
+        fs.unlink(`./${upload.repositoryName}/${file.moveTo}`, (err) => {
+          if (err) throw err;
+        });
+      });
+    }
     await model.destroy();
     return res.status(200).send('Elément supprimé');
   } catch (error) {
