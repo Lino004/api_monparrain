@@ -46,13 +46,14 @@ const create = async (req, res) => {
       filename,
       extension,
       id,
-      foodId, type,
+      foodId,
+      type,
     };
     let result = {};
     if (type === validations.const.IMAGE) {
       const [file, created] = await Model.findOrCreate({
-        where: {foodId, type},
-        defaults: payload
+        where: { foodId, type },
+        defaults: payload,
       });
       if (created) {
         const food = await Food.findByPk(foodId);
@@ -60,10 +61,11 @@ const create = async (req, res) => {
         await food.save();
         fileToUpload.mv(`./${upload.repositoryName}/${moveTo}`);
         result = file;
+      } else {
+        const message = 'Il existe d&jà une image associé à ce food';
+        loggingError(NAMESPACE, message, new Error(message));
+        return res.status(400).send({ message });
       }
-      const message = 'Il existe d&jà une image associé à ce food';
-      loggingError(NAMESPACE, message, new Error(message));
-      return res.status(400).send({ message });
     } else {
       fileToUpload.mv(`./${upload.repositoryName}/${moveTo}`);
       result = await Model.create(payload);
@@ -99,7 +101,7 @@ const deleteOne = async (req, res) => {
       return res.status(200).send('Elément supprimé');
     });
   } catch (error) {
-    const message = 'Erreur lors de la suppression de l\'élément';
+    const message = "Erreur lors de la suppression de l'élément";
     loggingError(NAMESPACE, message, error);
     return res.status(400).send({ message });
   }
