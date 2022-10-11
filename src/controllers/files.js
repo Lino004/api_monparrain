@@ -59,8 +59,11 @@ const create = async (req, res) => {
         food.image = file.url;
         await food.save();
         fileToUpload.mv(`./${upload.repositoryName}/${moveTo}`);
+        result = file;
       }
-      result = file;
+      const message = 'Il existe d&jà une image associé à ce food';
+      loggingError(NAMESPACE, message, new Error(message));
+      return res.status(400).send({ message });
     } else {
       fileToUpload.mv(`./${upload.repositoryName}/${moveTo}`);
       result = await Model.create(payload);

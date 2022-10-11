@@ -10,7 +10,7 @@ const REPOSITORIES = [IMAGES];
 const TYPES = [IMAGE, AUTRE];
 
 const create = async (req) => {
-  const { repository, foodId, type } = req.query;
+  const { /* repository, */ foodId, type } = req.query;
   const errors = [];
   if (!req.files || Object.keys(req.files).length === 0) {
     errors.push({
@@ -19,13 +19,13 @@ const create = async (req) => {
       location: 'formData',
     });
   }
-  if (!REPOSITORIES.includes(repository)) {
-    errors.push({
-      msg: `Ce champ doit être l'une des valeurs suivante: ${REPOSITORIES.join(',')}`,
-      param: 'repository',
-      location: 'query',
-    });
-  }
+  // if (!REPOSITORIES.includes(repository)) {
+  //   errors.push({
+  //     msg: `Ce champ doit être l'une des valeurs suivante: ${REPOSITORIES.join(',')}`,
+  //     param: 'repository',
+  //     location: 'query',
+  //   });
+  // }
   if (!foodId) {
     errors.push({
       msg: 'Ce champ est obligatoire',
